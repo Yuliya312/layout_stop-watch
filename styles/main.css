@@ -28,8 +28,8 @@
     z-index: 2;
     background-color: #c25d5d;
     border-radius: 5px;
-    -webkit-animation: tik-tak 216000s linear infinite;
-            animation: tik-tak 216000s linear infinite; }
+    -webkit-animation: tik-tak 43200s linear infinite;
+            animation: tik-tak 43200s linear infinite; }
     .stopwatch__hour-hand::after {
       content: "";
       position: absolute;
