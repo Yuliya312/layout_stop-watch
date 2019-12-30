@@ -1,0 +1,102 @@
+.stopwatch {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  background-color: rgba(220, 236, 241, 0.7);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(95, 152, 168, 0.3); }
+  .stopwatch__center {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background-color: #5f98a8;
+    border-radius: 50%;
+    z-index: 3; }
+  .stopwatch__hour-hand {
+    width: 12px;
+    height: 150px;
+    position: relative;
+    left: calc(50% - 5px);
+    top: calc(50% - 148px);
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    z-index: 2;
+    background-color: #c25d5d;
+    border-radius: 5px;
+    -webkit-animation: tik-tak 216000s linear infinite;
+            animation: tik-tak 216000s linear infinite; }
+    .stopwatch__hour-hand::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 12px;
+      height: 12px;
+      background-color: #914b4b;
+      border-radius: 3px; }
+  .stopwatch__minute-hand {
+    width: 10px;
+    height: 190px;
+    position: absolute;
+    left: calc(50% - 5px);
+    top: calc(50% - 190px);
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    z-index: 1;
+    background-color: #5f98a8;
+    border-radius: 5px;
+    -webkit-animation: tik-tak 3600s linear infinite;
+            animation: tik-tak 3600s linear infinite; }
+    .stopwatch__minute-hand::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      background-color: #3c626d;
+      border-radius: 3px; }
+  .stopwatch__sec-hand {
+    width: 5px;
+    height: 230px;
+    position: absolute;
+    left: calc(50% - 3px);
+    top: calc(50% - 227px);
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    background-color: #5f98a8;
+    border-radius: 5px;
+    -webkit-animation: tik-tak 60s linear infinite;
+            animation: tik-tak 60s linear infinite; }
+    .stopwatch__sec-hand::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      background-color: #3c626d;
+      border-radius: 3px; }
+
+@-webkit-keyframes tik-tak {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes tik-tak {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+/*# sourceMappingURL=main.css.map */
